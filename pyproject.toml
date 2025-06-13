@@ -1,0 +1,15 @@
+[project]
+name = "Headerizer"
+version = "0.1.0"
+description = "Minimal-dependence CLI tool for inserting headers into source files."
+authors = [{ name = "Beckett Frey", email = "beckett.frey@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+headerizer = "cli:cli"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

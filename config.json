@@ -1,0 +1,105 @@
+{
+  "file_types": {
+    ".py": {
+      "name": "Python",
+      "comment_prefix": "# ",
+      "extensions": [".py"]
+    },
+    ".js": {
+      "name": "JavaScript",
+      "comment_prefix": "// ",
+      "extensions": [".js", ".jsx", ".mjs", ".cjs"]
+    },
+    ".ts": {
+      "name": "TypeScript",
+      "comment_prefix": "// ",
+      "extensions": [".ts", ".tsx"]
+    },
+    ".java": {
+      "name": "Java",
+      "comment_prefix": "// ",
+      "extensions": [".java"]
+    },
+    ".c": {
+      "name": "C/C++",
+      "comment_prefix": "// ",
+      "extensions": [".c", ".cpp", ".cxx", ".cc", ".h", ".hpp"]
+    },
+    ".cs": {
+      "name": "C#",
+      "comment_prefix": "// ",
+      "extensions": [".cs"]
+    },
+    ".php": {
+      "name": "PHP",
+      "comment_prefix": "// ",
+      "extensions": [".php"]
+    },
+    ".rb": {
+      "name": "Ruby",
+      "comment_prefix": "# ",
+      "extensions": [".rb"]
+    },
+    ".go": {
+      "name": "Go",
+      "comment_prefix": "// ",
+      "extensions": [".go"]
+    },
+    ".rs": {
+      "name": "Rust",
+      "comment_prefix": "// ",
+      "extensions": [".rs"]
+    },
+    ".sh": {
+      "name": "Shell",
+      "comment_prefix": "# ",
+      "extensions": [".sh", ".bash", ".zsh"]
+    },
+    ".sql": {
+      "name": "SQL",
+      "comment_prefix": "-- ",
+      "extensions": [".sql"]
+    },
+    ".r": {
+      "name": "R",
+      "comment_prefix": "# ",
+      "extensions": [".r", ".R"]
+    },
+    ".m": {
+      "name": "MATLAB",
+      "comment_prefix": "% ",
+      "extensions": [".m"]
+    },
+    ".swift": {
+      "name": "Swift",
+      "comment_prefix": "// ",
+      "extensions": [".swift"]
+    },
+    ".kt": {
+      "name": "Kotlin",
+      "comment_prefix": "// ",
+      "extensions": [".kt", ".kts"]
+    }
+  },
+  "default_ignore": [
+    "dist",
+    "build",
+    "node_modules",
+    "*.log",
+    "*.tmp",
+    ".DS_Store",
+    "coverage",
+    ".vscode",
+    ".idea",
+    "*.min.js",
+    "*.bundle.js",
+    "*.min.css",
+    "*.bundle.css",
+    "*.pyc",
+    ".git",
+    ".venv",
+    "venv",
+    "env",
+    ".env"
+  ]
+}
