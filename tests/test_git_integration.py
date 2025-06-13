@@ -160,7 +160,6 @@ class TestGitIntegration(unittest.TestCase):
             self.assertIsNotNone(git_root)
             
 
-
     def test_git_root_with_worktree(self):
         """Test Git root detection with Git worktrees."""
         # Create main repo
@@ -169,9 +168,11 @@ class TestGitIntegration(unittest.TestCase):
         
         # Create a branch for worktree
         os.chdir(main_repo)
-        subprocess.run(['git', 'checkout', '-b', 'feature'], check=True)
-        subprocess.run(['git', 'checkout', 'main'], check=True)  # Use 'main' instead of 'master'
         
+        # Get current branch (e.g., 'master' or 'main')
+        current_branch = subprocess.check_output(['git', 'branch', '--show-current'], text=True).strip()
+        subprocess.run(['git', 'checkout', current_branch], check=True)
+
         # Create worktree (if Git version supports it)
         worktree_path = self.temp_dir / 'worktree'
         try:

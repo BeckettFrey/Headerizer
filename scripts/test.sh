@@ -10,7 +10,6 @@ echo "🔍 Running tests..."
 
 # Ensure PYTHONPATH includes the current directory
 export PYTHONPATH="$PROJECT_ROOT"
-echo "PYTHONPATH: $PYTHONPATH"
 
 # Run pytest with any additional args passed to this script
 pytest tests "$@"
