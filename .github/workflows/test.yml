@@ -11,17 +11,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Debug Environment
-        run: |
-          echo "📁 Current directory: $(pwd)"
-          echo "📄 Files:"
-          ls -R
-          echo "🐍 Python version:"
-          python --version
-
       - name: Install dependencies
-        run: |
-          pip install -e .
+        run: |          
           pip install pytest
 
       - name: Run tests
