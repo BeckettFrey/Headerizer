@@ -1,4 +1,5 @@
 # Headerizer
+![Tests](https://github.com/BeckettFrey/Headerizer/actions/workflows/test.yml/badge.svg)
 
 **Headerizer** is a command-line utility that automatically adds file path headers to source files. It's ideal for maintaining clear provenance in large or multi-language projects by embedding the file's location directly into its contents using appropriate comment syntax.
 
