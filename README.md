@@ -108,6 +108,7 @@ headerizer -rp src/
 
 ---
 
+
 ## ✅ Confirmation Prompt
 
 Before modifying any files, Headerizer will display how many files are targeted for update and prompt you to confirm the operation:
@@ -152,6 +153,17 @@ The `config.json` file defines:
 
 ---
 
+## 🛣️ Roadmap
+
+Upcoming features for Headerizer:
+
+* 🧪 Add coverage reporting and badges
+* 🛡️ Additional safety checks (e.g., dry-run mode)
+* 📦 Distribute via PyPI for easier install (`pip install headerizer`)
+* 📁 VSCode extension integration (long-term)
+
+---
+
 ## 🤝 Contributing
 
 Ideas, PRs, and feature requests welcome! Please open issues for bugs or suggestions.
@@ -161,3 +173,4 @@ Ideas, PRs, and feature requests welcome! Please open issues for bugs or suggest
 ## 📄 License
 
 This project is licensed under the MIT License.
+
