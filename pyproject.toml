@@ -11,5 +11,8 @@ dependencies = []
 headerizer = "cli:cli"
 
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["cli", "config", "processor", "utils"]  # Explicitly list top-level modules
