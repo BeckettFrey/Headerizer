@@ -1,4 +1,4 @@
-# File: utils.py
+# File: src/headerizer/utils.py
 import subprocess
 import fnmatch
 from pathlib import Path

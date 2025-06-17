@@ -29,38 +29,7 @@ var/
 *.manifest
 *.spec
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# CLI project specific
+# Environment vars
 .env
 .venv/
 venv/
@@ -70,11 +39,6 @@ env/
 *.ini
 *.cfg
 
-# VS Code
-.vscode/
-
 # MacOS
 .DS_Store
 
-# Logs
-*.log

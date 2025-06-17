@@ -1,7 +1,9 @@
 # Headerizer
-![Tests](https://github.com/BeckettFrey/Headerizer/actions/workflows/test.yml/badge.svg)
+![Run Tests](https://github.com/BeckettFrey/Headerizer/actions/workflows/test.yml/badge.svg)
 
-**Headerizer** is a command-line utility that automatically adds file path headers to source files. It's ideal for maintaining clear provenance in large or multi-language projects by embedding the file's location directly into its contents using appropriate comment syntax.
+**headerizer** is an experimental command-line utility that automatically adds file path headers to source files. It's ideal for maintaining clear provenance in large or multi-language projects by embedding the file's location directly into its contents using appropriate comment syntax.
+
+> ⚠️ **Experimental**: This project is in active development. Use at your own risk.
 
 > ✨ Perfect for developers who want clear file provenance in AI-assisted development and large codebases.
 
@@ -39,29 +41,6 @@ Headerizer supports the following languages (and more):
 - **R**, **MATLAB**, **Swift**, **Kotlin**
 
 > 📋 Configurations are defined in `config.json` and can be extended.
-
-## 🧪 Tests
-
-Headerizer uses `pytest` for testing, make sure you have it installed.
-
-To run the full test suite:
-
-```bash
-# chmod +x ./scripts/test.sh
-./scripts/test.sh
-```
-
-This script:
-- Ensures you're running from the project root
-- Sets PYTHONPATH for local imports
-- Runs all tests in the tests/ directory
-- Supports passing additional pytest flags (e.g., `-v`, `--maxfail=1`)
-
-Example:
-
-```bash
-./scripts/test.sh -v
-```
 
 ---
 
@@ -166,11 +145,29 @@ Upcoming features for Headerizer:
 
 ## 🤝 Contributing
 
-Ideas, PRs, and feature requests welcome! Please open issues for bugs or suggestions.
+Ideas, PRs, and feature requests welcome! This project is in active development.
+
+**Current Status**: Core functionality is working, but the project is experimental and evolving.
+
+For development:
+
+```bash
+# Clone the repository
+git clone https://github.com/BeckettFrey/Headerizer.git
+cd Headerizer
+
+# Install in editable development mode
+pip install -e .
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run tests
+pytest
+```
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License.
-

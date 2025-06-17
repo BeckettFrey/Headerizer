@@ -1,5 +1,6 @@
+# File: src/headerizer/processor.py
 from pathlib import Path
-from utils import load_headerignore, should_ignore, get_file_type_config, find_git_root
+from headerizer.utils import load_headerignore, should_ignore, get_file_type_config, find_git_root
 
 def add_header_to_file(file_path, file_types, header_path, comment_prefix):
     try:

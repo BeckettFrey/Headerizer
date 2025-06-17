@@ -1,3 +1,4 @@
+# File: src/headerizer/config.py
 from pathlib import Path
 import json
 import sys
@@ -16,6 +17,7 @@ def load_config():
                 config['file_types'],
                 config.get('default_ignore', [])
             )
+        
     except (json.JSONDecodeError, KeyError) as e:
         print(f"❌ Error: Invalid config.json: {e}")
         sys.exit(1)

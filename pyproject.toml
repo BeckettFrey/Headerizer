@@ -1,18 +1,22 @@
 [project]
-name = "Headerizer"
-version = "0.1.0"
+name = "headerizer"
+version = "0.1.0.dev0"
 description = "Minimal-dependence CLI tool for inserting headers into source files."
 authors = [{ name = "Beckett Frey", email = "beckett.frey@gmail.com" }]
 readme = "README.md"
 license = { text = "MIT" }
+requires-python = ">=3.13.2"
 dependencies = []
 
 [project.scripts]
-headerizer = "cli:cli"
+headerizer = "headerizer.cli:cli"
 
 [build-system]
 requires = ["setuptools>=77.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["cli", "config", "processor", "utils"]  # Explicitly list top-level modules
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

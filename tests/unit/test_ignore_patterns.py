@@ -1,6 +1,7 @@
+# File: tests/unit/test_ignore_patterns.py
 import tempfile
 from pathlib import Path
-from utils import should_ignore, load_headerignore
+from headerizer.utils import should_ignore, load_headerignore
 
 class TestIgnorePatterns:
     """Test file/directory ignoring functionality"""

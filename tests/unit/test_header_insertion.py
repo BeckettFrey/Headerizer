@@ -1,6 +1,7 @@
+# File: tests/unit/test_header_insertion.py
 from pathlib import Path
 from unittest.mock import patch, mock_open
-from processor import add_header_to_file
+from headerizer.processor import add_header_to_file
 
 class TestHeaderInsertion:
     """Test core header insertion functionality"""

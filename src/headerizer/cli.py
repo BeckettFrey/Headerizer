@@ -1,6 +1,7 @@
+# File: src/headerizer/cli.py
 import sys
-from config import load_config
-from processor import find_and_process_files
+from headerizer.config import load_config
+from headerizer.processor import find_and_process_files
 
 def cli():
     use_relative = False
@@ -44,7 +45,6 @@ def cli():
         default_ignore=default_ignore,
         print_written=print_written
     )
-
 
 def print_help():
     print("Usage: headerizer [options] [directory]")

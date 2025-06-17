@@ -1,17 +1,12 @@
+# File: tests/unit/test_git_integration.py
 import unittest
 import tempfile
 import subprocess
-from pathlib import Path
 from unittest.mock import patch
-import sys
 import os
-
-# Add the parent directory to the path to import modules
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from utils import find_git_root
-from processor import find_and_process_files
-
+from pathlib import Path
+from headerizer.utils import find_git_root
+from headerizer.processor import find_and_process_files
 
 class TestGitIntegration(unittest.TestCase):
     """Test suite for Git integration functionality in Headerizer."""
@@ -118,9 +113,10 @@ class TestGitIntegration(unittest.TestCase):
         result = find_git_root(outer_repo)
         self.assertEqual(result.resolve(), outer_repo.resolve())
             
-    @patch("processor.input", return_value="n")
+    @patch("builtins.input", return_value="n")
+    @patch("headerizer.processor.add_header_to_file", return_value="n")
     @patch("builtins.print")
-    def test_relative_paths_in_processing(self, mock_print, mock_input):
+    def test_relative_paths_in_processing(self, mock_print, mock_add_header, mock_input  ):
         """Test that relative paths are used correctly during file processing."""
         mock_input.return_value = 'n'  # Cancel operation
         
@@ -141,7 +137,7 @@ class TestGitIntegration(unittest.TestCase):
         }
 
         # Mock the processor to capture the paths being used
-        with patch('processor.add_header_to_file') as mock_add_header:
+        with patch('headerizer.processor.add_header_to_file') as mock_add_header:
             mock_add_header.return_value = 'written'
             
             # Test with relative paths
