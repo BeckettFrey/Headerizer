@@ -179,3 +179,7 @@ pytest
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+Bonsai is evolving! Bug reports, feature suggestions, and PRs are all welcome.
