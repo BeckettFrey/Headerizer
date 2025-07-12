@@ -46,6 +46,14 @@ Headerizer supports the following languages (and more):
 
 ## ⚙️ Installation
 
+To install Headerizer for ongoing usage, it's recommended to use [pipx](https://pipxproject.github.io/pipx/):
+
+```bash
+pipx install git+https://github.com/BeckettFrey/Headerizer.git
+```
+
+For development or local testing:
+
 ```bash
 git clone https://github.com/BeckettFrey/Headerizer.git
 cd Headerizer

@@ -36,7 +36,6 @@ venv/
 ENV/
 env/
 *.env
-*.ini
 *.cfg
 
 # MacOS
