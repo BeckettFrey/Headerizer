@@ -3,36 +3,23 @@
 
 **headerizer** is an experimental command-line utility that automatically adds file path headers to source files. It's ideal for maintaining clear provenance in large or multi-language projects by embedding the file's location directly into its contents using appropriate comment syntax.
 
-> ⚠️ **Experimental**: This project is in active development. Use at your own risk.
-
-> ✨ Perfect for developers who want clear file provenance in AI-assisted development and large codebases.
+> **Experimental**: Install in development mode and use at your own discretion.
 
 ---
 
-## 🔧 Features
+## Benefits for AI-Assisted Development
 
-- 📝 Adds file path headers using language-specific comment styles
-- 📍 Supports relative paths from the Git root for portability
-- 🚫 Skips files and directories defined in `.headerignore` or configuration
-- 🌐 Handles 20+ file types out of the box
-- ✅ Interactive confirmation before applying changes
-- 🧠 **Smart header management** — checks for existing headers and only updates when path format changes (relative ↔ absolute)
+Adding file path headers improves **context awareness** when using AI tools and large language models.
 
----
+> By embedding the file's location, AI can make more accurate inferences about project structure and intent.
 
-## 💡 Benefits for AI-Assisted Development
-
-Adding file path headers improves **context awareness** when using AI tools such as code assistants and large language models.
-
-> 🤖 By embedding the file's location, AI can make more accurate inferences about project structure and intent.
-
-- 🎯 Responses can be tailored based on file roles (e.g., tests, configs, utilities)
-- 💬 File-specific conversations become easier and more meaningful
-- 🔍 Enhanced code understanding in modern AI-integrated development environments
+- Responses can be tailored based on file roles (e.g., tests, configs, utilities)
+- File-specific conversations become easier and more meaningful
+- Enhanced code understanding in modern AI-integrated development environments
 
 ---
 
-## 🌐 Supported File Types
+## Supported File Types
 
 Headerizer supports the following languages (and more):
 
@@ -44,7 +31,7 @@ Headerizer supports the following languages (and more):
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 To install Headerizer for ongoing usage, it's recommended to use [pipx](https://pipxproject.github.io/pipx/):
 
@@ -62,7 +49,7 @@ pip install -e .
 
 ---
 
-## 🚀 Usage
+## Quick Start
 
 ```bash
 headerizer [options] [directory]
@@ -74,7 +61,7 @@ headerizer [options] [directory]
 - `-p`, `--print` – Print each file that a header was added to
 - `-h`, `--help` – Show help message and exit
 
-> 📂 If no directory is specified, Headerizer defaults to the current directory.
+> If no directory is specified, Headerizer defaults to the current directory.
 
 ### Example
 
@@ -96,7 +83,7 @@ headerizer -rp src/
 ---
 
 
-## ✅ Confirmation Prompt
+## Confirmation Prompt
 
 Before modifying any files, Headerizer will display how many files are targeted for update and prompt you to confirm the operation:
 
@@ -104,11 +91,11 @@ Before modifying any files, Headerizer will display how many files are targeted 
 ⚠️ Proceed with header insertion? (y/N):
 ```
 
-> 🧠 **Smart Updates:** Headerizer intelligently checks for existing headers before making changes. Files that already have headers will only be updated if you're switching between relative and absolute path formats.
+> **Smart Updates:** Headerizer intelligently checks for existing headers before making changes. Files that already have headers will only be updated if you're switching between relative and absolute path formats.
 
 ---
 
-## 🚫 Ignoring Files and Directories
+## Ignoring Files and Directories
 
 ### Project-Level Ignore
 
@@ -128,30 +115,30 @@ Modify the `default_ignore` section in `config.json` before building/installing 
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 The `config.json` file defines:
 
-- 📄 Supported file types and extensions
-- 💬 Comment prefixes per language
-- 🚫 Default ignore patterns
+- Supported file types and extensions
+- Comment prefixes per language
+- Default ignore patterns
 
-> 🔧 You can edit this file to support additional languages or tweak header behavior.
+> You can edit this file to support additional languages or tweak header behavior.
 
 ---
 
-## 🛣️ Roadmap
+## Roadmap
 
 Upcoming features for Headerizer:
 
-* 🧪 Add coverage reporting and badges
-* 🛡️ Additional safety checks (e.g., dry-run mode)
-* 📦 Distribute via PyPI for easier install (`pip install headerizer`)
-* 📁 VSCode extension integration (long-term)
+* Add coverage reporting and badges
+* Additional safety checks (e.g., dry-run mode)
+* Distribute via PyPI for easier install (`pip install headerizer`)
+* VSCode extension integration (long-term)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Ideas, PRs, and feature requests welcome! This project is in active development.
 
@@ -176,10 +163,6 @@ pytest
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-Bonsai is evolving! Bug reports, feature suggestions, and PRs are all welcome.
