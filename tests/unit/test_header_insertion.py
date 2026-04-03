@@ -116,3 +116,32 @@ class TestHeaderInsertion:
         with patch('builtins.open', side_effect=IOError("Permission denied")):
             result = add_header_to_file(Path("test.py"), {}, "test.py", "# ")
             assert result == "error"
+    
+    def test_shebang_handling(self):
+        """Test that headers are inserted after shebang lines"""
+        # Shell script with shebang - header should go after shebang
+        shell_content = "#!/bin/bash\necho 'hello'\n"
+        expected_shell = "#!/bin/bash\n# File: scripts/deploy.sh\necho 'hello'\n"
+        
+        with patch('builtins.open', mock_open(read_data=shell_content)) as mock_file:
+            result = add_header_to_file(Path("scripts/deploy.sh"), {}, "scripts/deploy.sh", "# ")
+            mock_file().write.assert_called_once_with(expected_shell)
+            assert result == "written"
+        
+        # Python script with shebang - header should go after shebang
+        py_content = "#!/usr/bin/env python3\nprint('hello')\n"
+        expected_py = "#!/usr/bin/env python3\n# File: test.py\nprint('hello')\n"
+        
+        with patch('builtins.open', mock_open(read_data=py_content)) as mock_file:
+            result = add_header_to_file(Path("test.py"), {}, "test.py", "# ")
+            mock_file().write.assert_called_once_with(expected_py)
+            assert result == "written"
+        
+        # Existing header after shebang should be updated
+        existing_header_content = "#!/bin/bash\n# File: old/path.sh\necho 'hello'\n"
+        expected_updated = "#!/bin/bash\n# File: new/path.sh\necho 'hello'\n"
+        
+        with patch('builtins.open', mock_open(read_data=existing_header_content)) as mock_file:
+            result = add_header_to_file(Path("scripts/deploy.sh"), {}, "new/path.sh", "# ")
+            mock_file().write.assert_called_once_with(expected_updated)
+            assert result == "written"

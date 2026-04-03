@@ -18,7 +18,11 @@ def add_header_to_file(file_path, file_types, header_path, comment_prefix):
         if header_line_index is not None:
             lines[header_line_index] = new_header
         else:
-            lines.insert(0, new_header)
+            # If first line is a shebang, insert after it
+            if lines and lines[0].startswith("#!"):
+                lines.insert(1, new_header)
+            else:
+                lines.insert(0, new_header)
 
         new_content = "\n".join(lines) + ("\n" if content.endswith("\n") else "")
 
